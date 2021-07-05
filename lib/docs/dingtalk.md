@@ -1,1 +1,1 @@
-<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/docs/qrcode/dingtalk.jpeg" width="200px" >
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/lib/docs/qrcode/dingtalk.jpeg" width="200px" >
