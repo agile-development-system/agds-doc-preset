@@ -1,3 +1,12 @@
+## [1.0.2](https://gitee.com/agile-development-system/agds-doc-preset/compare/v1.0.1...v1.0.2) (2021-07-05)
+
+
+### Features
+
+* 修改logo地址 ([9e8f8a1](https://gitee.com/agile-development-system/agds-doc-preset/commits/9e8f8a178f59b810a201fb9522f617baf1a3083f))
+
+
+
 ## [1.0.1](https://gitee.com/agile-development-system/agds-doc-preset/compare/85a91d905567ca2e3e222938bbcd0d636c4e9bfc...v1.0.1) (2021-07-05)
 
 
