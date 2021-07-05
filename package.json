@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/agile-development-system/eslint-config-js.git"
+    "url": "https://gitee.com/agile-development-system/agds-doc-preset.git"
   },
   "files": [
     "lib"

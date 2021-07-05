@@ -1,77 +1,28 @@
-# @agds/eslint-config-js
+# @agds/agds-doc-preset
 
+**版本** ：1.0.0
 
-
-**版本** ：1.0.6
-
-agds的js eslint配置
+agds的统一的doc配置
 
 ## 快速开始
 
 ### 安装
 
 ```bash
-npm i -D @agds/eslint-config-js
+npm i -D @agds/agds-doc-preset
 ```
 
 ### 引入
 
 ```js
-// .eslintrc.js
+// .agds.doc.config.js
+const preset = require('@agds/agds-doc-preset');
 module.exports = {
-    extends: [
-        '@agds/js',
-    ],
+    presets: [preset],
 };
 ```
 
 
-
-
-### 添加lint脚本
-
-在`package.json`的`scripts`下添加lint命令；
-
-```json
-{
-  "scripts": {
-    "lint": "eslint --ext .js,.json,.md src",
-    "lint:fix": "eslint --ext .js,.json,.md src --fix"
-  }
-}
-```
-
-### 基于`lint-staged`提供增量lint脚本
-
-- 安装`lint-staged`包
-    ```
-    npm i -D lint-staged
-    ```
-- 在`package.json`中添加`pkg['lint-staged']`脚本
-    ```json
-    {
-      "lint-staged": {
-        "src/**/*.{js,json,md}": [
-          "eslint --fix"
-        ]
-      }
-    }
-    ```
-
-### 使用`yorkie`在git声明周期内检测代码格式
-
-- 安装`yorkie`包
-    ```
-    npm i -D yorkie
-    ```
-- 在`package.json`中添加`pkg.gitHooks`脚本
-    ```json
-    {
-      "gitHooks": {
-        "pre-commit": "lint-staged"
-      }
-    }
-    ```
  <!-- 渲染后缀内容  -->
 
 
@@ -82,69 +33,92 @@ module.exports = {
 ## 配置源码
 
 ```js
+const GenDoc = require('@agds/cli-plugin-doc');
 const { FastPath, FastFs } = require('@agds/node-utils');
-const cwdBabelConfigPath = FastPath.getCwdPath('./babel.config.js');
-const hasCwdBabelConfg = FastFs.getPathStatSync(cwdBabelConfigPath);
-module.exports = {
-    env: {
-        commonjs: true,
-        es2021: true,
-        node: true,
-    },
-    extends: [
-        'standard',
-        'plugin:jsdoc/recommended',
-        'plugin:markdown/recommended',
-    ],
-    plugins: [
-        'jsdoc',
-        'json-format',
-    ],
-    settings: {
-        'json/sort-package-json': false,
-        'json/json-with-comments-files': [],
-        'json/ignore-files': [],
-        jsdoc: {
-            mode: 'typescript',
-        },
-    },
-    parser: hasCwdBabelConfg ? '@babel/eslint-parser' : undefined,
-    parserOptions: {
-        ecmaVersion: 12,
-        babelOptions: {
-            configFile: hasCwdBabelConfg ? cwdBabelConfigPath : undefined,
-        },
-    },
-    rules: {
-        indent: ['error', 4, { SwitchCase: 1 }],
-        semi: ['error', 'always'],
-        'comma-dangle': ['error', 'always-multiline'],
-        'space-before-function-paren': [
-            'error',
-            { anonymous: 'always', named: 'never', asyncArrow: 'always' },
-        ],
-        // jsdoc
-        'valid-jsdoc': 'off',
-        'jsdoc/require-property': 0,
-        'jsdoc/require-returns-description': 0,
-        'jsdoc/no-undefined-types': 0,
-    },
-    overrides: [
-        {
-            files: ['**/*.md/*.{js,json}', 'docs/**', 'test/**'],
-            rules: {
-                'no-console': 'off',
-                'import/no-unresolved': 'off',
-                'no-undef': 'off',
-                'no-unused-expressions': 'off',
-                'no-unused-vars': 'off',
-                'padded-blocks': 'off',
-                'eol-last': 'off',
+const pkgPath = FastPath.getCwdPath('package.json');
+let pkg = {};
+let repository;
+if (FastFs.getPathStatSync(pkgPath)) {
+    pkg = require(pkgPath);
+    try {
+        repository = pkg.repository.url.replace(/.git$/, '');
+    } catch (error) {
+    }
+}
+
+module.exports = (
+    /**
+     * 配置参数
+     *
+     * @returns {GenDoc.RenderOptions}
+     */
+    async () => {
+        return {
+            output: 'README.md',
+            helpers: {
+                devInstall: true,
+                postfixes: [
+                ],
             },
-        },
-    ],
-};
+            /**
+             * 最后处理的函数
+             *
+             * @param {GenDoc.RenderOptions} config 文档配置
+             */
+            modify(config) {
+                console.log(repository);
+                config.helpers.postfixes.push(
+                    {
+                        id: 'license',
+                        title: '许可证',
+                        content: `${repository ? `[MIT License](${repository + '/blob/master/LICENSE'})` : 'MIT License'}\nCopyright (c) 2021 锦阳`,
+                    },
+                    {
+                        id: 'donate',
+                        title: '请维护者喝杯咖啡',
+                        content: GenDoc.getFileContent('./docs/donate.md'),
+                    },
+                    {
+                        id: 'dingtalk',
+                        title: '加入钉钉群讨论或加入开发',
+                        content: GenDoc.getFileContent('./docs/dingtalk.md'),
+                    },
+                );
+                config.helpers.logo = 'https://gitee.com/agile-development-system/agds-doc-preset/raw/master/docs/logo/light/1.png';
+            },
+        };
+    })();
 ```
 
+
+
+
+<a name="license"></a>
+
+
+## 许可证
+
+[MIT License](https://gitee.com/agile-development-system/agds-doc-preset/blob/master/LICENSE)
+Copyright (c) 2021 锦阳
+
+
+
+<a name="donate"></a>
+
+
+## 请维护者喝杯咖啡
+
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/docs/qrcode/alipay.jpeg" width="200px" >
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/docs/qrcode/wechatpay.jpeg" width="200px" >
+
+
+
+
+<a name="dingtalk"></a>
+
+
+## 加入钉钉群讨论或加入开发
+
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/docs/qrcode/dingtalk.jpeg" width="200px" >
 
 
