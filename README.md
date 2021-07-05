@@ -1,6 +1,6 @@
 # @agds/agds-doc-preset
 
-**版本** ：1.0.0
+**版本** ：1.0.1
 
 agds的统一的doc配置
 
