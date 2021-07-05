@@ -1,6 +1,6 @@
 {
   "name": "@agds/agds-doc-preset",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "agds的统一的doc配置",
   "main": "lib/index.js",
   "scripts": {
