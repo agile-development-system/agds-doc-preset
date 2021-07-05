@@ -1,3 +1,12 @@
+## [1.0.3](https://gitee.com/agile-development-system/agds-doc-preset/compare/v1.0.2...v1.0.3) (2021-07-05)
+
+
+### Bug Fixes
+
+* 修复bug ([0759cf5](https://gitee.com/agile-development-system/agds-doc-preset/commits/0759cf5344e6ed63f1e8842f65a9e155cdb52e29))
+
+
+
 ## [1.0.2](https://gitee.com/agile-development-system/agds-doc-preset/compare/v1.0.1...v1.0.2) (2021-07-05)
 
 
