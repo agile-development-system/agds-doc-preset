@@ -1,6 +1,6 @@
 # @agds/agds-doc-preset
 
-**版本** ：1.0.2
+**版本** ：1.0.3
 
 agds的统一的doc配置
 
@@ -94,10 +94,10 @@ module.exports = (
  * 获取绝对路径的文件内容
  *
  * @param {string} filename 文件名
+ * @returns {string}
  */
 function getRelativeCode(filename) {
-    console.log(path.join(__dirname, filename));
-    GenDoc.getFileContent(path.join(__dirname, filename));
+    return GenDoc.getFileContent(path.join(__dirname, filename));
 }
 ```
 
@@ -119,11 +119,17 @@ Copyright (c) 2021 锦阳
 
 ## 请维护者喝杯咖啡
 
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/docs/qrcode/alipay.jpeg" width="200px" >
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/docs/qrcode/wechatpay.jpeg" width="200px" >
+
+
 
 
 <a name="dingtalk"></a>
 
 
 ## 加入钉钉群讨论或加入开发
+
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/docs/qrcode/dingtalk.jpeg" width="200px" >
 
 
