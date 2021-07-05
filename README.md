@@ -96,6 +96,7 @@ module.exports = (
  * @param {string} filename 文件名
  */
 function getRelativeCode(filename) {
+    console.log(path.join(__dirname, filename));
     GenDoc.getFileContent(path.join(__dirname, filename));
 }
 ```
