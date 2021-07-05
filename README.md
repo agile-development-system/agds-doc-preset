@@ -1,6 +1,6 @@
 # @agds/agds-doc-preset
 
-**版本** ：1.0.1
+**版本** ：1.0.2
 
 agds的统一的doc配置
 
@@ -84,7 +84,7 @@ module.exports = (
                         content: getRelativeCode('./docs/dingtalk.md'),
                     },
                 );
-                config.helpers.logo = 'https://gitee.com/agile-development-system/agds-doc-preset/raw/master/docs/logo/light/1.png';
+                config.helpers.logo = 'https://gitee.com/agile-development-system/agds-doc-preset/raw/master/lib/docs/logos/light/1.png';
             },
         };
     }
