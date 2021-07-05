@@ -1,49 +1,15 @@
-## [1.0.6](https://gitee.com/agile-development-system/eslint-config-js/compare/v1.0.5...v1.0.6) (2021-06-16)
-
-
-
-## [1.0.5](https://gitee.com/agile-development-system/eslint-config-js/compare/v1.0.4...v1.0.5) (2021-06-09)
-
-
-### Features
-
-* 对docs和test目录下的文件忽略一些不适合放在文档中的校验规则 ([73bbe2a](https://gitee.com/agile-development-system/eslint-config-js/commits/73bbe2af0277c4c87e925731446155d20f4fac6b))
-
-
-
-## [1.0.4](https://gitee.com/agile-development-system/eslint-config-js/compare/v1.0.3...v1.0.4) (2021-06-02)
-
-
-### Features
-
-* 新增markdown代码块检测 ([7a42b77](https://gitee.com/agile-development-system/eslint-config-js/commits/7a42b77bcdaacd7ce57d45591910f0c26c0443de))
-
-
-
-## [1.0.3](https://gitee.com/agile-development-system/eslint-config-js/compare/v1.0.2...v1.0.3) (2021-05-31)
-
-
-
-## [1.0.2](https://gitee.com/agile-development-system/eslint-config-js/compare/v1.0.1...v1.0.2) (2021-05-31)
-
-
-### Features
-
-* **index:** 新增json配置 ([2353765](https://gitee.com/agile-development-system/eslint-config-js/commits/2353765fedc8c46601db87d1e435515f384e0e63))
-
-
-
-## [1.0.1](https://gitee.com/agile-development-system/eslint-config-js/compare/8e8ec25923fd3641efbc7c114df34c60aa6b1457...v1.0.1) (2021-05-24)
+## [1.0.1](https://gitee.com/agile-development-system/agds-doc-preset/compare/85a91d905567ca2e3e222938bbcd0d636c4e9bfc...v1.0.1) (2021-07-05)
 
 
 ### Bug Fixes
 
-* 适配没有babel的项目 ([f7f5ce5](https://gitee.com/agile-development-system/eslint-config-js/commits/f7f5ce59094bd9a503f432c8078d74ead35011b9))
+* 读取文件内容传入绝对路径 ([65fe3bc](https://gitee.com/agile-development-system/agds-doc-preset/commits/65fe3bc69affa972e8db200413c403b96736dd72))
 
 
 ### Features
 
-* init ([8e8ec25](https://gitee.com/agile-development-system/eslint-config-js/commits/8e8ec25923fd3641efbc7c114df34c60aa6b1457))
+* init ([85a91d9](https://gitee.com/agile-development-system/agds-doc-preset/commits/85a91d905567ca2e3e222938bbcd0d636c4e9bfc))
+* 完成 ([fa2014d](https://gitee.com/agile-development-system/agds-doc-preset/commits/fa2014d4f1445119e8f5ae77257da4e6b90ffcb8))
 
 
 
