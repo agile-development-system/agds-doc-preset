@@ -1,6 +1,6 @@
 # @agds/agds-doc-preset
 
-**版本** ：1.0.3
+**版本** ：1.0.4
 
 agds的统一的doc配置
 
@@ -119,8 +119,8 @@ Copyright (c) 2021 锦阳
 
 ## 请维护者喝杯咖啡
 
-<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/docs/qrcode/alipay.jpeg" width="200px" >
-<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/docs/qrcode/wechatpay.jpeg" width="200px" >
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/lib/docs/qrcode/alipay.jpeg" width="200px" >
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/lib/docs/qrcode/wechatpay.jpeg" width="200px" >
 
 
 
@@ -130,6 +130,6 @@ Copyright (c) 2021 锦阳
 
 ## 加入钉钉群讨论或加入开发
 
-<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/docs/qrcode/dingtalk.jpeg" width="200px" >
+<img src="https://gitee.com/agile-development-system/agds-doc-preset/raw/master/lib/docs/qrcode/dingtalk.jpeg" width="200px" >
 
 
