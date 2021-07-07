@@ -1,6 +1,6 @@
 # @agds/agds-doc-preset
 
-**版本** ：1.0.5
+**版本** ：1.0.6
 
 agds的统一的doc配置
 
@@ -42,7 +42,8 @@ let repository;
 if (FastFs.getPathStatSync(pkgPath)) {
     pkg = require(pkgPath);
     try {
-        repository = pkg.repository.url.replace(/.git$/, '');
+        const repoName = pkg.repository.url.match(/^(https:\/\/|git@)gitee\.com(\/|:)agile-development-system\/(?<repoName>[\w-]+).git$/).groups.repoName;
+        repository = 'https://gitee.com/agile-development-system/' + repoName;
     } catch (error) {
     }
 }
