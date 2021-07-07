@@ -1,3 +1,12 @@
+## [1.0.5](https://gitee.com/agile-development-system/agds-doc-preset/compare/v1.0.4...v1.0.5) (2021-07-07)
+
+
+### Bug Fixes
+
+* **qrcode:** 修改二维码宽度,使他尽量清晰 ([0bd53e6](https://gitee.com/agile-development-system/agds-doc-preset/commits/0bd53e6fb47b84d5f2ff436d128a672cb2931001))
+
+
+
 ## [1.0.4](https://gitee.com/agile-development-system/agds-doc-preset/compare/v1.0.3...v1.0.4) (2021-07-05)
 
 
