@@ -1,3 +1,12 @@
+## [1.0.6](https://gitee.com/agile-development-system/agds-doc-preset/compare/v1.0.5...v1.0.6) (2021-07-07)
+
+
+### Bug Fixes
+
+* 修改开源证书链接获取方式 ([270d89f](https://gitee.com/agile-development-system/agds-doc-preset/commits/270d89f1cf4fe0e3e3f4b182538341bc48467fcf))
+
+
+
 ## [1.0.5](https://gitee.com/agile-development-system/agds-doc-preset/compare/v1.0.4...v1.0.5) (2021-07-07)
 
 
